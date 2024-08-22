@@ -1,8 +1,10 @@
-import express from 'express';
-import  dotenv  from 'dotenv';
+import express from "express";
+import  dotenv  from "dotenv";
+import db from "./database/dbConnection.js";
 
-dotenv.config({path:
-    './.env'});
+dotenv.config({path:'./.env'});
+db();
+
 const app = express();
 const port = process.env.PORT || 3000;
 
